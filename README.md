@@ -95,7 +95,7 @@ npx prisma generate
 npx prisma migrate dev
 ```
 
-### Fuerza la sincronizacion
+### Forzar sincronizacion
 ```bash
 npx prisma db push --force-reset
-```# API-REST-EXPRESS-POSTGRES-PRISMA
+```
