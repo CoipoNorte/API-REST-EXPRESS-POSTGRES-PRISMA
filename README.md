@@ -1,6 +1,6 @@
-# API REST NODE PG PRISMA
+# API REST EXPRESS POSTGRES PRISMA
 
-api rest utilizando node con express, prisma y de base de datos local postgreSQL
+api rest utilizando node con express, prisma y de base de datos local con postgreSQL
 
 | Tipo   | Ruta                        | Función Controladora | Objeto JSON de respuesta                                       |
 |--------|-----------------------------|----------------------|--------------------------------------------------------------|
