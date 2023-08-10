@@ -56,7 +56,7 @@ Para realizar un lanzamiento inmediato deberas utilizar los siguientes acciones:
 
 ```bash
 npm i
-nxp prisma generate
+npx prisma generate
 ```
 
 ## PosgrestSQL
