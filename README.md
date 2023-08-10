@@ -49,6 +49,16 @@ npm install nodemon --save-dev
 npm install @prisma/client --save-dev  
 ```
 
+## ¡ATENCION!
+Para realizar un lanzamiento inmediato deberas utilizar los siguientes acciones:
+
+.env --> DATABASE_URL=postgresql://USUARIO:CONTRASEÑA@localhost:5432/NOMBRE_BD
+
+```bash
+npm i
+nxp prisma generate
+```
+
 ## PosgrestSQL
 
 Crear la base de datos
