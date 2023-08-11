@@ -75,12 +75,14 @@ npx prisma init
 ```
 
 ### Ejemplo utilizado de modelo de tabla
+```bash
 model User {
   id       Int      @id @default(autoincrement())
   email    String   @unique
   pass     String
   rol      String
 }
+```
 
 ### Estructura de la coneccion
 DATABASE_URL=postgresql://USUARIO:CONTRASEÑA@localhost:5432/NOMBRE_BD
