@@ -1,6 +1,6 @@
 const prisma = require('../database/prisma.db');
 
-// GET getUsers /getusers (Obtener usuarios)
+// getUsers (Obtener usuarios)
 exports.getUsers = async (req, res) => {
     try {
         const users = await prisma.user.findMany();
@@ -10,7 +10,7 @@ exports.getUsers = async (req, res) => {
     }
 };
 
-// GET getUserById /getuserid/:id (obtener un usuario por id)
+// getUserById (obtener un usuario por id)
 exports.getUserById = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
@@ -27,7 +27,7 @@ exports.getUserById = async (req, res) => {
     }
 };
 
-// POST setUser /adduser (agregar un usuario)
+// setUser (agregar un usuario)
 exports.setUser = async (req, res) => {
     try {
         const { email, pass, rol } = req.body;
@@ -44,7 +44,7 @@ exports.setUser = async (req, res) => {
     }
 };
 
-// PUT updateUser /updateuser/:id (actualizar un usuario por id)
+// updateUser (actualizar un usuario por id)
 exports.updateUser = async (req, res) => {
     try {
         const id = parseInt(req.params.id);
@@ -63,7 +63,7 @@ exports.updateUser = async (req, res) => {
     }
 };
 
-// DELETE deleteUserById /deleteuserid/:id (eliminar un usuario por id)
+// deleteUserById (eliminar un usuario por id)
 exports.deleteUserById = async (req, res) => {
     try {
         const id = parseInt(req.params.id);

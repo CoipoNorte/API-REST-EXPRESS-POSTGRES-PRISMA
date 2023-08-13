@@ -4,12 +4,11 @@ api rest utilizando node con express, prisma y de base de datos local con postgr
 
 | Tipo   | Ruta                        | Función Controladora | Objeto JSON de respuesta                                       |
 |--------|-----------------------------|----------------------|--------------------------------------------------------------|
-| GET    | /getusers                   | getUsers             | Lista de usuarios en formato JSON                            |
-| GET    | /getuserid/:id              | getUserById          | Datos del usuario con el ID especificado en formato JSON    |
-| POST   | /adduser                    | setUser              | Respuesta "Usuario agregado" en formato JSON                 |
-| PUT    | /updateuser/:id             | updateUser           | Respuesta "Usuario actualizado" en formato JSON              |
-| DELETE | /deleteuserid/:id           | deleteUserById      | Respuesta "Usuario eliminado" en formato JSON                |
-
+| GET    | /                   | getUsers             | Lista de usuarios en formato JSON                            |
+| GET    | /:id              | getUserById          | Datos del usuario con el ID especificado en formato JSON    |
+| POST   | /                    | setUser              | Respuesta "Usuario agregado" en formato JSON                 |
+| PUT    | /:id             | updateUser           | Respuesta "Usuario actualizado" en formato JSON              |
+| DELETE | /:id           | deleteUserById      | Respuesta "Usuario eliminado" en formato JSON                |
 
 ## Lanzar proyecto
 
@@ -49,16 +48,6 @@ npm install nodemon --save-dev
 npm install @prisma/client --save-dev  
 ```
 
-## ¡ATENCION!
-Para realizar un lanzamiento inmediato deberas utilizar los siguientes acciones:
-
-.env --> DATABASE_URL=postgresql://USUARIO:CONTRASEÑA@localhost:5432/NOMBRE_BD
-
-```bash
-npm i
-npx prisma generate
-```
-
 ## PosgrestSQL
 
 Crear la base de datos
@@ -85,7 +74,10 @@ model User {
 ```
 
 ### Estructura de la coneccion
+.env
+```bash
 DATABASE_URL=postgresql://USUARIO:CONTRASEÑA@localhost:5432/NOMBRE_BD
+```
 
 ### Genera el esquema
 ```bash
