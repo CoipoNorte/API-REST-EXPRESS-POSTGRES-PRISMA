@@ -10,6 +10,20 @@ api rest utilizando node con express, prisma y de base de datos local con postgr
 | PUT    | /:id             | updateUser           | Respuesta "Usuario actualizado" en formato JSON              |
 | DELETE | /:id           | deleteUserById      | Respuesta "Usuario eliminado" en formato JSON                |
 
+| Ruta   | Ruta              | Descripción          |
+|--------|-------------------|----------------------|
+|POST    | /	|Agregar una nueva pregunta principal |
+|POST    | /:parentId/questions |	Agregar una nueva pregunta secundaria |
+|POST    | /:questionId/answers	| Agregar una nueva respuesta a una pregunta |
+|GET     | /main	| Obtener todas las preguntas principales |
+|GET     | /:parentId/questions	| Obtener todas las preguntas secundarias de una pregunta principal |
+|GET     | /:questionId/answers	| Obtener todas las respuestas de una pregunta |
+|PUT     | /:questionId	| Modificar una pregunta principal o secundaria |
+|DELETE  | /:questionId	| Eliminar una pregunta principal o secundaria |
+|GET     | /main/:questionId	| Obtener una pregunta principal por su ID |
+|GET     | /:parentId/questions/:questionId	| Obtener una pregunta secundaria por ID |
+|DELETE  | /clear	| Eliminar todas las preguntas y respuestas |
+
 ## Lanzar proyecto
 
 A continuación, algunos comandos útiles para utilizar este proyecto:
