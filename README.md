@@ -10,7 +10,7 @@ api rest utilizando node con express, prisma y de base de datos local con postgr
 | PUT    | /:id             | updateUser           | Respuesta "Usuario actualizado" en formato JSON              |
 | DELETE | /:id           | deleteUserById      | Respuesta "Usuario eliminado" en formato JSON                |
 
-| Ruta   | Ruta              | Descripción          |
+| Tipo   | Ruta              | Descripción          |
 |--------|-------------------|----------------------|
 |POST    | /	|Agregar una nueva pregunta principal |
 |POST    | /:parentId/questions |	Agregar una nueva pregunta secundaria |
