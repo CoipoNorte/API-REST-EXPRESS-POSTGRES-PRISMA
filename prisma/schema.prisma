@@ -1,6 +1,8 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// schema.prisma
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,4 +17,33 @@ model User {
   email    String   @unique
   pass     String
   rol      String
+}
+
+// Modelos de datos
+model Preguntas {
+  id            Int       @id @default(autoincrement())
+  texto         String
+  tipo          String
+  padreID       Int?
+  respuestaID   Int? // Agregamos el campo respuestaID
+  respuesta     Respuestas? @relation("Respuesta", fields: [respuestaID], references: [id])
+  padreDe       PreguntaHija[] @relation("PadreDe")
+  preguntasHijas PreguntaHija[] @relation("PreguntasHijas")
+}
+
+model Respuestas {
+  id         Int      @id @default(autoincrement())
+  texto      String
+  preguntaID Int?
+  pregunta   Preguntas[] @relation("Respuesta")
+}
+
+model PreguntaHija {
+  padre Preguntas @relation("PadreDe", fields: [padreID], references: [id])
+  hija  Preguntas @relation("PreguntasHijas", fields: [hijaID], references: [id])
+
+  padreID Int
+  hijaID  Int
+
+  @@id([padreID, hijaID])
 }

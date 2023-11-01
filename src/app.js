@@ -1,5 +1,6 @@
 const express = require('express');
 const userRoutes = require('./routes/user.routes');
+const chatRoutes = require('./routes/chat.routes'); // Importa las rutas del chat
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -8,6 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use('/user', userRoutes);
+app.use('/chat', chatRoutes); // Usa las rutas del chat en /chat
 
 // Iniciar el servidor
 app.listen(port, () => {
